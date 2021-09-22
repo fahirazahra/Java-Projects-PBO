@@ -26,21 +26,14 @@ public class MyClass {
         op2.hitungPenjumlahan();
         op2.hitungPengurangan();
         
-        //Perintah main() method yang dipindahkan dari file MyNewClass.
+        /* Project 1 no. 2 */
         OperasiBilangan op3 = new OperasiBilangan();
-        op3.bilPertama = 50;
-        op3.bilKedua = 60;
+        op3.bilPertama = 100;
+        op3.bilKedua = 150;
         op3.hitungPenjumlahan();
         op3.hitungPengurangan();
-        
-        /* Project 1 no. 2 */
-        OperasiBilangan op4 = new OperasiBilangan();
-        op4.bilPertama = 100;
-        op4.bilKedua = 150;
-        op4.hitungPenjumlahan();
-        op4.hitungPengurangan();
-        op4.hitungPerkalian();
-        op4.hitungPembagian();
+        op3.hitungPerkalian();
+        op3.hitungPembagian();
         
     }
     
