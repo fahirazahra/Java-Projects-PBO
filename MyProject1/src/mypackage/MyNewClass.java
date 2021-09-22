@@ -11,7 +11,7 @@ package mypackage;
  */
 public class MyNewClass {
     
-    private static void main(String[] args) {
+    public static void main(String[] args) {
         
         OperasiBilangan op1 = new OperasiBilangan();
         op1.bilPertama = 50;
