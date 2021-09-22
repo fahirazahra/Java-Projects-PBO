@@ -9,7 +9,7 @@ package mypackage;
  *
  * @author Fahira
  */
-public class MyNewClass {
+public class MyNewClass { //di run file agar bisa dijalankan (run)
     
     public static void main(String[] args) {
         
