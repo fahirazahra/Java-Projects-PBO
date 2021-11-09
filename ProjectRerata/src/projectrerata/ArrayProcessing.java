@@ -61,10 +61,27 @@ public class ArrayProcessing {
         return nilaiMin;
     }
     
+    static void urutkan(int[] data){
+        for(int i = 0; i < data.length; i++){
+            for(int j = 0; j < data.length - 1; j++){
+                if(data[j] > data[j + 1]){
+                    int urut = data[j];
+                    data[j] = data[j + 1];
+                    data[j + 1] = urut;
+                }
+            }
+        }
+    }
+    
     void output(){
         System.out.println("=============================");
         System.out.println("Rata-Rata: " + this.HitungRerata(this.dataBil));
         System.out.println("Nilai Maksimum: " + cariMax(this.dataBil));
         System.out.println("Nilai Minimum: " + cariMin(this.dataBil));
+        System.out.println("Sorting Nilai: ");
+        urutkan(this.dataBil);
+        for (int i = 0; i < n; i++){
+            System.out.print(this.dataBil[100 - n+i] + " ");
+        }
     }
 }
