@@ -61,6 +61,7 @@ public class ArrayProcessing {
         return nilaiMin;
     }
     
+    //Sorting Nilai (Project 2)
     static void urutkan(int[] data){
         for(int i = 0; i < data.length; i++){
             for(int j = 0; j < data.length - 1; j++){
