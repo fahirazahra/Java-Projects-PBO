@@ -20,16 +20,15 @@ public class ProjectSIAKAD {
         
         //Contoh Objek Data Pegawai
         // contoh obyek data pegawai
-        Pegawai p1 = new Pegawai("0622", "Papa", 2, LocalDate.of(1964, 6, 22));
+        Pegawai p1 = new Pegawai("0222", "Ucup", 2, LocalDate.of(1994, 2, 22));
         p1.printPegawai();
          
         // contoh obyek data pegawai dosen
-        Dosen p2 = new Dosen("1214", "Mama", 2, LocalDate.of(1967, 12, 14), "196712140002");
+        Dosen p2 = new Dosen("0902", "Udin", 2, LocalDate.of(1995, 2, 9), "196712140002");
         p2.printPegawai();
          
         // contoh obyek data pegawai nondosen
-        NonDosen p3 = new NonDosen("0813", "Fahira Zahra", 1, LocalDate.of(2002, 8, 13));
+        NonDosen p3 = new NonDosen("0214", "Ujang", 1, LocalDate.of(1997, 2, 14));
         p3.printPegawai();
     }
-    
 }
