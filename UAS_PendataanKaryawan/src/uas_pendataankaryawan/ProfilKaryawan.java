@@ -35,51 +35,51 @@ public class ProfilKaryawan {
     void printData(){
         LocalDate localDate = LocalDate.parse(this.TglLahir);
         LocalDate today = LocalDate.now();
-        Period selisih = Period.between(localDate, today);
-        System.out.println(this.kodeKaryawan+"\t"+this.Nama+"\t"+this.Golongan+"\t"+selisih+"\t"+this.Status+"\t"+this.JumlahAnak);
+        Period SelisihGaji = Period.between(localDate, today);
+        System.out.println(this.kodeKaryawan+"\t"+this.Nama+"\t"+this.Golongan+"\t"+SelisihGaji+"\t"+this.Status+"\t"+this.JumlahAnak);
     }
     void cariData(){
         LocalDate localDate = LocalDate.parse(this.TglLahir);
         LocalDate today = LocalDate.now();
-        Period selisih = Period.between(localDate, today);
+        Period SelisihGaji = Period.between(localDate, today);
         System.out.println("Kode Karyawan : " + this.kodeKaryawan
                          + "\nNama Karyawan : " + this.Nama
                          + "\nGolongan : " + this.Golongan
-                         + "\nUsia : " + selisih
+                         + "\nUsia : " + SelisihGaji
                          + "\nStatus Menikah : " + this.Status
                          + "\nJumlah Anak : " + this.JumlahAnak);
-        int Gaji = 0, tunjanganNikah = 0, tunjanganAnak = 0, tunjangan = 0;
+        int GajiKaryawan = 0, TunjanganMenikah = 0, TunjanganAnak = 0, Tunjangan = 0;
         if(null != this.Golongan)switch (this.Golongan) {
             case "A":
-                Gaji = 5000000;
+                GajiKaryawan = 5000000;
                 break;
             case "B":
-                Gaji = 6000000;
+                GajiKaryawan = 6000000;
                 break;
             case "C":
-                Gaji = 7000000;
+                GajiKaryawan = 7000000;
                 break;
             case "D":
-                Gaji = 8000000;
+                GajiKaryawan = 8000000;
                 break;
             default:
                 break;
         }
         if (this.Status == "1" || this.Status == "Sudah Menikah"){
-            tunjanganNikah = 10/100 * Gaji;
-            tunjanganAnak = 5/100 * Gaji * this.JumlahAnak;
-            tunjangan = tunjanganNikah + tunjanganAnak;
+            TunjanganMenikah = 10/100 * GajiKaryawan;
+            TunjanganAnak = 5/100 * GajiKaryawan * this.JumlahAnak;
+            Tunjangan = TunjanganMenikah + TunjanganAnak;
         }
-        int GajiKotor = Gaji + tunjangan;
-        double potongan = 2.5/100 * Gaji; 
-        double GajiBersih = GajiKotor - potongan;
+        int GajiKotor = GajiKaryawan + Tunjangan;
+        double PotonganGaji = 2.5/100 * GajiKaryawan; 
+        double GajiBersih = GajiKotor - PotonganGaji;
         
-        System.out.println("Gaji Pokok : Rp" + Gaji
-        + "\nTunjangan Suami/Istri : Rp" + tunjanganNikah
-        + "\nTunjangan Anak : Rp" + tunjanganAnak);
+        System.out.println("Gaji Pokok : Rp" + GajiKaryawan
+        + "\nTunjangan Suami/Istri : Rp" + TunjanganMenikah
+        + "\nTunjangan Anak : Rp" + TunjanganAnak);
         System.out.println("=================================================");
         System.out.println("Gaji Kotor : Rp" + GajiKotor
-        + "\nPotongan : Rp" + potongan);
+        + "\nPotongan : Rp" + PotonganGaji);
         System.out.println("=================================================");
         System.out.println("Gaji Bersih : Rp" + GajiBersih);
     }
